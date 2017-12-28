@@ -108,8 +108,76 @@
 [Reference][7]
 
 ```java
-lista.removeIf(p -> p.getId() == id);
+	lista.removeIf(p -> p.getId() == id);
 ```
+
+### Database
+
+**References**
+
+* [Accessing data with MySQL][9]
+
+> Dependency
+
+```xml
+	<!-- Database -->
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-data-jpa</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+	</dependency>
+```
+
+> Properties
+
+```properties
+spring.jpa.hibernate.ddl-auto=update
+spring.datasource.url=jdbc:mysql://localhost:3306/crudmvc
+spring.datasource.username=crud
+spring.datasource.password=123456
+```
+
+**MySQL**
+
+1. Create the new database
+2. Creates the user
+3. Gives all the privileges to the new user on the newly created database
+
+```
+mysql> create database crudmvc; 
+mysql> create user 'crud'@'localhost' identified by '123456'; 
+mysql> grant all on crudmvc.* to 'crud'@'localhost'; 
+```
+
+```java
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+public class Pessoa {
+
+	@Id @GeneratedValue
+	private int id;
+	private String nome;
+
+	// getters, setters, constructors and toString
+}
+```
+
+```java
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface PessoaRepository extends CrudRepository<Pessoa, Integer> {
+
+}
+```
+
 
 
 [0]: https://docs.spring.io/spring-boot/docs/current/reference/html/using-boot-devtools.html#using-boot-devtools
@@ -121,3 +189,4 @@ lista.removeIf(p -> p.getId() == id);
 [6]: http://www.thymeleaf.org/doc/articles/standardurlsyntax.html
 [7]: https://www.leveluplunch.com/java/examples/remove-element-from-list/
 [8]: https://gist.github.com/romach/10081ba3e24ffc9f75aadada7df80df8
+[9]: https://spring.io/guides/gs/accessing-data-mysql/
