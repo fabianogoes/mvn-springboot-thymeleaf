@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Cadastro</title>
+	</head>
+<body>
+	<h1 th:text="${titulo}">Cadastro</h1>
+	<hr/>
+	
+	<ul>
+		<li><a href="/">Home</a></li>
+		<li><a href="/cadastro">Cadastro</a></li>
+		<li><a href="/pesquisa">Pesquisa</a></li>
+	</ul>
+	
+	<hr/>
+	
+	<form action="#" th:action="@{/salvar}" th:object="${pessoa}" method="post">
+		<label>ID</label>
+		<input type="text" name="id" readonly="readonly" th:value="*{id}" />
+		<br/>
+		<br/>
+		<label>Nome</label>
+		<input type="text" name="nome" th:value="*{nome}" />
+		<br/>
+		<br/>
+		<button type="submit">Salvar</button>
+		<a href="/">Cancelar</a>
+	</form>
+	
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Deletar</title>
+	</head>
+<body>
+	<h1 th:text="${titulo}">Deletar</h1>
+	<hr/>
+	
+	<ul>
+		<li><a href="/">Home</a></li>
+		<li><a href="/cadastro">Cadastro</a></li>
+		<li><a href="/pesquisa">Pesquisa</a></li>
+	</ul>
+	
+	<hr/>
+	
+	<h3>Confirma a exclusão do Regitro ?</h3>
+	
+	<label th:text="${pessoa.id + ' - ' + pessoa.nome}"></label>
+	
+	<hr/>
+	
+	<a th:href="@{/confirmarDeletar/{id}(id=${pessoa.id})}">Confirmar a Exclusão</a>	
+
+</body>
+</html>
