@@ -140,7 +140,7 @@ spring.datasource.username=crud
 spring.datasource.password=123456
 ```
 
-**MySQL**
+> MySQL
 
 1. Create the new database
 2. Creates the user
@@ -151,6 +151,8 @@ mysql> create database crudmvc;
 mysql> create user 'crud'@'localhost' identified by '123456'; 
 mysql> grant all on crudmvc.* to 'crud'@'localhost'; 
 ```
+
+> Model 
 
 ```java
 import javax.persistence.Entity;
@@ -168,6 +170,8 @@ public class Pessoa {
 }
 ```
 
+> Repository
+
 ```java
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
@@ -177,7 +181,6 @@ public interface PessoaRepository extends CrudRepository<Pessoa, Integer> {
 
 }
 ```
-
 
 
 [0]: https://docs.spring.io/spring-boot/docs/current/reference/html/using-boot-devtools.html#using-boot-devtools
