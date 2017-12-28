@@ -15,7 +15,7 @@
 
 ### Thymeleaf
 
-***Referencias***
+***References***
 
 * [Serving Web Content with Spring MVC][1]
 * [Spring Boot Hello World Example – Thymeleaf][2]
