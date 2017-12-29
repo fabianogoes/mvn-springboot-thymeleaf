@@ -25,7 +25,7 @@
 </dependency>
 ```
 
-### Thymeleaf
+### [Thymeleaf](http://www.thymeleaf.org/)
 -------------
 
 ***References***
@@ -75,7 +75,7 @@
 
 ```
 
-### Java 8 - Lambda
+### [Java 8 - Lambda](https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html)
 
 **Max/Min value**
 
@@ -275,6 +275,31 @@ public interface PessoaRepository extends CrudRepository<Pessoa, Integer> {
   </div>
 </div>
 ```
+
+-------------
+
+### References All
+
+[https://docs.spring.io/spring-boot/docs/current/reference/html/using-boot-devtools.html#using-boot-devtools][0]
+[https://spring.io/guides/gs/serving-web-content/][1]
+[https://www.mkyong.com/spring-boot/spring-boot-hello-world-example-thymeleaf/][2]
+[http://www.thymeleaf.org/doc/tutorials/3.0/thymeleafspring.html][3]
+[http://www.baeldung.com/java-collection-min-max][4]
+[https://www.mkyong.com/java8/java-8-streams-filter-examples/][5]
+[http://www.thymeleaf.org/doc/articles/standardurlsyntax.html][6]
+[https://www.leveluplunch.com/java/examples/remove-element-from-list/][7]
+[https://gist.github.com/romach/10081ba3e24ffc9f75aadada7df80df8][8]
+[https://spring.io/guides/gs/accessing-data-mysql/][9]
+[http://getbootstrap.com/][10]
+[https://getbootstrap.com/docs/4.0/components/jumbotron/][11]
+[https://getbootstrap.com/docs/4.0/components/forms/][12]
+[https://getbootstrap.com/docs/4.0/content/tables/][13]
+[https://getbootstrap.com/docs/4.0/components/buttons/][14]
+[https://getbootstrap.com/docs/4.0/components/card/][15]
+[https://getbootstrap.com/docs/4.0/components/navbar/][16]
+[https://getbootstrap.com/docs/4.0/layout/overview/#containers][17]
+[https://www.codeply.com/go/OkCUy1M8JM/bootstrap-4_alpha-6-set-table-column-width][18]
+
 
 [0]: https://docs.spring.io/spring-boot/docs/current/reference/html/using-boot-devtools.html#using-boot-devtools
 [1]: https://spring.io/guides/gs/serving-web-content/
