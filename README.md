@@ -47,33 +47,33 @@
 
 
 ```html
-	<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 
-	<h1 th:text="${titulo}">MVC Application</h1>
+<h1 th:text="${titulo}">MVC Application</h1>
 
-	<tr th:each="pessoa : ${lista}">
-		<td th:text="${pessoa.id}"></td>
-		<td th:text="${pessoa.nome}"></td>
-		<td>
-			<a href="/editar">Editar</a>
-			<a href="/deletar">Deletar</a>
-		</td>
-	</tr>
+<tr th:each="pessoa : ${lista}">
+	<td th:text="${pessoa.id}"></td>
+	<td th:text="${pessoa.nome}"></td>
+	<td>
+		<a href="/editar">Editar</a>
+		<a href="/deletar">Deletar</a>
+	</td>
+</tr>
 
-	<form action="#" th:action="@{/salvar}" th:object="${pessoa}" method="post">
-		<label>ID</label>
-		<input type="text" name="id" readonly="readonly" th:value="*{id}" />
-		<br/>
-		<br/>
-		<label>Nome</label>
-		<input type="text" name="nome" th:value="*{nome}" />
-		<br/>
-		<br/>
-		<button type="submit">Salvar</button>
-		<a href="/">Cancelar</a>
-	</form>
+<form action="#" th:action="@{/salvar}" th:object="${pessoa}" method="post">
+	<label>ID</label>
+	<input type="text" name="id" readonly="readonly" th:value="*{id}" />
+	<br/>
+	<br/>
+	<label>Nome</label>
+	<input type="text" name="nome" th:value="*{nome}" />
+	<br/>
+	<br/>
+	<button type="submit">Salvar</button>
+	<a href="/">Cancelar</a>
+</form>
 
-	<a th:href="@{/editar/{id}(id=${pessoa.id})}">Editar</a>	
+<a th:href="@{/editar/{id}(id=${pessoa.id})}">Editar</a>	
 
 ```
 
@@ -206,71 +206,71 @@ public interface PessoaRepository extends CrudRepository<Pessoa, Integer> {
 > Navbar
 
 ```html
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-	    <ul class="navbar-nav mr-auto">
-	      <li class="nav-item">
-	        <a class="nav-link" href="/">Home</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="/cadastro">Cadastro</a>
-	      </li>
-	      <li class="nav-item active">
-	        <a class="nav-link" href="/pesquisa">Pesquisa</a>
-	      </li>
-	     </ul>
-	  </div>
-	</nav>	
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/cadastro">Cadastro</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/pesquisa">Pesquisa</a>
+      </li>
+     </ul>
+  </div>
+</nav>	
 ```
 
 > Form
 
 ```html
-	<div class="card">
-		<div class="card-body">
-			<form action="#" th:action="@{/salvar}" th:object="${pessoa}" method="post">
-				<label>ID</label>
-				<input class="form-control" type="text" name="id" readonly="readonly" th:value="*{id}" />
-				<label>Nome</label>
-				<input class="form-control" type="text" name="nome" th:value="*{nome}" />
-				<hr/>
-				<button class="btn btn-primary" type="submit">Salvar</button>
-				<a class="btn btn-secondary" href="/">Cancelar</a>
-			</form>
-		</div>
-	</div>	
+<div class="card">
+	<div class="card-body">
+		<form action="#" th:action="@{/salvar}" th:object="${pessoa}" method="post">
+			<label>ID</label>
+			<input class="form-control" type="text" name="id" readonly="readonly" th:value="*{id}" />
+			<label>Nome</label>
+			<input class="form-control" type="text" name="nome" th:value="*{nome}" />
+			<hr/>
+			<button class="btn btn-primary" type="submit">Salvar</button>
+			<a class="btn btn-secondary" href="/">Cancelar</a>
+		</form>
+	</div>
+</div>	
 ```
 
 > Table
 
 ```html
-	<div class="container-fluid">
-		<div class="row card">
-			<div class="col-sm-12">
-				<table class="table table-striped table-hover">
-					<thead>
-						<tr class="row">
-							<th class="col-sm-1 text-center">ID</th>
-							<th class="col-sm-9">Nome</th>
-							<th class="col-sm-2 text-center">
-								<a class="btn btn-primary" href="/cadastro">Novo</a>
-							</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class="row" th:each="pessoa : ${lista}">
-							<td class="col-sm-1 text-center" th:text="${pessoa.id}"></td>
-							<td class="col-sm-9" th:text="${pessoa.nome}"></td>
-							<td class="col-sm-2 text-center">
-								<a class="btn btn-success" th:href="@{/editar/{id}(id=${pessoa.id})}">Editar</a>
-								<a class="btn btn-danger" th:href="@{/deletar/{id}(id=${pessoa.id})}">Deletar</a>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
+<div class="container-fluid">
+	<div class="row card">
+		<div class="col-sm-12">
+			<table class="table table-striped table-hover">
+				<thead>
+					<tr class="row">
+						<th class="col-sm-1 text-center">ID</th>
+						<th class="col-sm-9">Nome</th>
+						<th class="col-sm-2 text-center">
+							<a class="btn btn-primary" href="/cadastro">Novo</a>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="row" th:each="pessoa : ${lista}">
+						<td class="col-sm-1 text-center" th:text="${pessoa.id}"></td>
+						<td class="col-sm-9" th:text="${pessoa.nome}"></td>
+						<td class="col-sm-2 text-center">
+							<a class="btn btn-success" th:href="@{/editar/{id}(id=${pessoa.id})}">Editar</a>
+							<a class="btn btn-danger" th:href="@{/deletar/{id}(id=${pessoa.id})}">Deletar</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</div>
+</div>
 ```
 
 [0]: https://docs.spring.io/spring-boot/docs/current/reference/html/using-boot-devtools.html#using-boot-devtools
