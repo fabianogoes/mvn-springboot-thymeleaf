@@ -77,9 +77,6 @@
 
 ```
 
-
-
-
 ### Java 8 - Lambda
 
 **Max/Min value**
@@ -87,13 +84,13 @@
 [Finding Max/Min of a List or Collection][4]
 
 ```java
-	int max = lista.stream()
-		.mapToInt(p -> p.getId())
-		.max().orElse(0);
+int max = lista.stream()
+	.mapToInt(p -> p.getId())
+	.max().orElse(0);
 
-	int max = lista.stream()
-		.mapToInt(p -> p.getId())
-		.min().orElse(0);		
+int max = lista.stream()
+	.mapToInt(p -> p.getId())
+	.min().orElse(0);		
 ```
 
 **Filters**
