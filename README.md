@@ -245,31 +245,31 @@ public interface PessoaRepository extends CrudRepository<Pessoa, Integer> {
 
 ```html
 <div class="container-fluid">
-	<div class="row card">
-		<div class="col-sm-12">
-			<table class="table table-striped table-hover">
-				<thead>
-					<tr class="row">
-						<th class="col-sm-1 text-center">ID</th>
-						<th class="col-sm-9">Nome</th>
-						<th class="col-sm-2 text-center">
-							<a class="btn btn-primary" href="/cadastro">Novo</a>
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr class="row" th:each="pessoa : ${lista}">
-						<td class="col-sm-1 text-center" th:text="${pessoa.id}"></td>
-						<td class="col-sm-9" th:text="${pessoa.nome}"></td>
-						<td class="col-sm-2 text-center">
-							<a class="btn btn-success" th:href="@{/editar/{id}(id=${pessoa.id})}">Editar</a>
-							<a class="btn btn-danger" th:href="@{/deletar/{id}(id=${pessoa.id})}">Deletar</a>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-	</div>
+  <div class="row card">
+    <div class="col-sm-12">
+	  <table class="table table-striped table-hover">
+		<thead>
+		  <tr class="row">
+			<th class="col-sm-1 text-center">ID</th>
+			<th class="col-sm-9">Nome</th>
+			<th class="col-sm-2 text-center">
+			  <a class="btn btn-primary" href="/cadastro">Novo</a>
+			</th>
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr class="row" th:each="pessoa : ${lista}">
+			<td class="col-sm-1 text-center" th:text="${pessoa.id}"></td>
+			<td class="col-sm-9" th:text="${pessoa.nome}"></td>
+			<td class="col-sm-2 text-center">
+			  <a class="btn btn-success" th:href="@{/editar/{id}(id=${pessoa.id})}">Editar</a>
+			  <a class="btn btn-danger" th:href="@{/deletar/{id}(id=${pessoa.id})}">Deletar</a>
+			</td>
+		  </tr>
+		</tbody>
+	  </table>
+    </div>
+  </div>
 </div>
 ```
 
