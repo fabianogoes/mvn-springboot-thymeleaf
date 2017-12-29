@@ -3,32 +3,44 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<title>Cadastro</title>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous" />
 	</head>
-<body>
-	<h1 th:text="${titulo}">Cadastro</h1>
-	<hr/>
+<body class="container">
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav mr-auto">
+	      <li class="nav-item">
+	        <a class="nav-link" href="/">Home</a>
+	      </li>
+	      <li class="nav-item active">
+	        <a class="nav-link" href="/cadastro">Cadastro</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="/pesquisa">Pesquisa</a>
+	      </li>
+	     </ul>
+	  </div>
+	</nav>	
+
+	<div class="jumbotron">
+		<h1 th:text="${titulo}">Cadastro</h1>
+	</div>
 	
-	<ul>
-		<li><a href="/">Home</a></li>
-		<li><a href="/cadastro">Cadastro</a></li>
-		<li><a href="/pesquisa">Pesquisa</a></li>
-	</ul>
-	
-	<hr/>
-	
-	<form action="#" th:action="@{/salvar}" th:object="${pessoa}" method="post">
-		<label>ID</label>
-		<input type="text" name="id" readonly="readonly" th:value="*{id}" />
-		<br/>
-		<br/>
-		<label>Nome</label>
-		<input type="text" name="nome" th:value="*{nome}" />
-		<br/>
-		<br/>
-		<button type="submit">Salvar</button>
-		<a href="/">Cancelar</a>
-	</form>
-	
+	<div class="card">
+		<div class="card-body">
+			<form action="#" th:action="@{/salvar}" th:object="${pessoa}" method="post">
+				<label>ID</label>
+				<input class="form-control" type="text" name="id" readonly="readonly" th:value="*{id}" />
+				<label>Nome</label>
+				<input class="form-control" type="text" name="nome" th:value="*{nome}" />
+				<hr/>
+				<button class="btn btn-primary" type="submit">Salvar</button>
+				<a class="btn btn-secondary" href="/">Cancelar</a>
+			</form>
+		</div>
+	</div>	
 
 </body>
 </html>

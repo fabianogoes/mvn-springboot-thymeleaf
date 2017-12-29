@@ -182,6 +182,81 @@ public interface PessoaRepository extends CrudRepository<Pessoa, Integer> {
 }
 ```
 
+### Bootstrap 4
+
+**References**
+
+* [Oficial Site][10]
+
+> Navbar
+
+```html
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav mr-auto">
+	      <li class="nav-item">
+	        <a class="nav-link" href="/">Home</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="/cadastro">Cadastro</a>
+	      </li>
+	      <li class="nav-item active">
+	        <a class="nav-link" href="/pesquisa">Pesquisa</a>
+	      </li>
+	     </ul>
+	  </div>
+	</nav>	
+```
+
+> Form
+
+```html
+	<div class="card">
+		<div class="card-body">
+			<form action="#" th:action="@{/salvar}" th:object="${pessoa}" method="post">
+				<label>ID</label>
+				<input class="form-control" type="text" name="id" readonly="readonly" th:value="*{id}" />
+				<label>Nome</label>
+				<input class="form-control" type="text" name="nome" th:value="*{nome}" />
+				<hr/>
+				<button class="btn btn-primary" type="submit">Salvar</button>
+				<a class="btn btn-secondary" href="/">Cancelar</a>
+			</form>
+		</div>
+	</div>	
+```
+
+> Table
+
+```html
+	<div class="container-fluid">
+		<div class="row card">
+			<div class="col-sm-12">
+				<table class="table table-striped table-hover">
+					<thead>
+						<tr class="row">
+							<th class="col-sm-1 text-center">ID</th>
+							<th class="col-sm-9">Nome</th>
+							<th class="col-sm-2 text-center">
+								<a class="btn btn-primary" href="/cadastro">Novo</a>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="row" th:each="pessoa : ${lista}">
+							<td class="col-sm-1 text-center" th:text="${pessoa.id}"></td>
+							<td class="col-sm-9" th:text="${pessoa.nome}"></td>
+							<td class="col-sm-2 text-center">
+								<a class="btn btn-success" th:href="@{/editar/{id}(id=${pessoa.id})}">Editar</a>
+								<a class="btn btn-danger" th:href="@{/deletar/{id}(id=${pessoa.id})}">Deletar</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+```
 
 [0]: https://docs.spring.io/spring-boot/docs/current/reference/html/using-boot-devtools.html#using-boot-devtools
 [1]: https://spring.io/guides/gs/serving-web-content/
@@ -193,3 +268,4 @@ public interface PessoaRepository extends CrudRepository<Pessoa, Integer> {
 [7]: https://www.leveluplunch.com/java/examples/remove-element-from-list/
 [8]: https://gist.github.com/romach/10081ba3e24ffc9f75aadada7df80df8
 [9]: https://spring.io/guides/gs/accessing-data-mysql/
+[10]: http://getbootstrap.com/
