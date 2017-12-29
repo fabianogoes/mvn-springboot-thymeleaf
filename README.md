@@ -15,9 +15,7 @@
 
 -------------------
 
-### Developer tools
-
-[Reference][0]
+### [Developer tools][0]
 
 ```xml
 <dependency>
