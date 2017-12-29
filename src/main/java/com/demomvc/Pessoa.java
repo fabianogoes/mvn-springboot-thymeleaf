@@ -7,6 +7,10 @@ import javax.persistence.Id;
 @Entity
 public class Pessoa {
 
+	public int getId() {
+		return id;
+	}
+
 	@Id @GeneratedValue
 	private int id;
 	private String nome;
@@ -17,10 +21,6 @@ public class Pessoa {
 	public Pessoa(int id, String nome) {
 		this.id = id;
 		this.nome = nome;
-	}
-
-	public int getId() {
-		return id;
 	}
 
 	public void setId(int id) {
