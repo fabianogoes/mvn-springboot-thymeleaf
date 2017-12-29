@@ -2,16 +2,16 @@
 
 ### Contents
 
-* Spring Boot
-* Spring MVC
-* Spring Data
-* JPA
-* Thymeleaf
-* Maven
-* MySQL
-* Bootstrap 4
-* HTML
-* Java 8 - Lambda
+* [Spring Boot](https://projects.spring.io/spring-boot/)
+* [Spring MVC](https://spring.io/guides/gs/serving-web-content/)
+* [Spring Data](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/)
+* [JPA](https://pt.wikipedia.org/wiki/Java_Persistence_API)
+* [Thymeleaf](http://www.thymeleaf.org/)
+* [Maven](https://maven.apache.org/)
+* [MySQL](https://www.mysql.com/)
+* [Bootstrap 4](https://getbootstrap.com/)
+* [HTML](https://pt.wikipedia.org/wiki/HTML)
+* [Java 8 - Lambda](https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html)
 
 -------------------
 
@@ -199,6 +199,14 @@ public interface PessoaRepository extends CrudRepository<Pessoa, Integer> {
 **References**
 
 * [Oficial Site][10]
+* [Jumbotron][11]
+* [Forms][12]
+* [Tables][13]
+* [Buttons][14]
+* [Cards / Panels][15]
+* [Navbar][16]
+* [Containers][17]
+* [Bootstrap 4 set table column width][18]
 
 > Navbar
 
@@ -281,3 +289,11 @@ public interface PessoaRepository extends CrudRepository<Pessoa, Integer> {
 [8]: https://gist.github.com/romach/10081ba3e24ffc9f75aadada7df80df8
 [9]: https://spring.io/guides/gs/accessing-data-mysql/
 [10]: http://getbootstrap.com/
+[11]: https://getbootstrap.com/docs/4.0/components/jumbotron/
+[12]: https://getbootstrap.com/docs/4.0/components/forms/
+[13]: https://getbootstrap.com/docs/4.0/content/tables/
+[14]: https://getbootstrap.com/docs/4.0/components/buttons/
+[15]: https://getbootstrap.com/docs/4.0/components/card/
+[16]: https://getbootstrap.com/docs/4.0/components/navbar/
+[17]: https://getbootstrap.com/docs/4.0/layout/overview/#containers
+[18]: https://www.codeply.com/go/OkCUy1M8JM/bootstrap-4_alpha-6-set-table-column-width
