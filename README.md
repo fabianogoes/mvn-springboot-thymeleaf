@@ -102,20 +102,20 @@
 
 
 ```java
-	Pessoa pessoa = lista.stream()
-		.filter(p -> p.getId() == id)
-		.findAny()
-		.orElse(null);
+Pessoa pessoa = lista.stream()
+	.filter(p -> p.getId() == id)
+	.findAny()
+	.orElse(null);
 ```
 
 **Update Value List**.  
 
 ```java
-	lista.forEach(p -> {
-		if(p.getId() == pessoa.getId()){
-			p.setNome(pessoa.getNome());
-		}
-	});
+lista.forEach(p -> {
+	if(p.getId() == pessoa.getId()){
+		p.setNome(pessoa.getNome());
+	}
+});
 ```
 
 **Delete Object from List**
@@ -123,7 +123,7 @@
 [Reference][7]
 
 ```java
-	lista.removeIf(p -> p.getId() == id);
+lista.removeIf(p -> p.getId() == id);
 ```
 
 ### Database
@@ -135,15 +135,15 @@
 > Dependency
 
 ```xml
-	<!-- Database -->
-	<dependency>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-data-jpa</artifactId>
-	</dependency>
-	<dependency>
-		<groupId>mysql</groupId>
-		<artifactId>mysql-connector-java</artifactId>
-	</dependency>
+<!-- Database -->
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
+<dependency>
+	<groupId>mysql</groupId>
+	<artifactId>mysql-connector-java</artifactId>
+</dependency>
 ```
 
 > Properties
